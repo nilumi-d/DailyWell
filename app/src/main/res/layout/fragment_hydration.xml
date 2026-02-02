@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/surface"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:paddingStart="@dimen/spacing_large"
+                android:paddingEnd="@dimen/spacing_large"
+                app:title="@string/hydration_title"
+                app:titleTextAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                app:titleTextColor="@color/text_primary" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <!-- Current Status Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                app:cardCornerRadius="@dimen/card_corner_radius_large"
+                app:cardElevation="@dimen/card_elevation_medium"
+                app:cardBackgroundColor="@color/card_hydration"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_large">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hydration_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_size_headline_small"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <!-- Current Intake -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/current_intake"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="@dimen/text_size_body_medium" />
+
+                            <TextView
+                                android:id="@+id/tv_current_intake"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_small"
+                                android:textColor="@color/primary"
+                                android:textSize="@dimen/text_size_display_small"
+                                android:textStyle="bold"
+                                tools:text="1200 ml" />
+
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="40dp"
+                            android:background="@color/text_hint"
+                            android:layout_marginHorizontal="@dimen/spacing_large" />
+
+                        <!-- Daily Goal -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/daily_goal"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="@dimen/text_size_body_medium" />
+
+                            <TextView
+                                android:id="@+id/tv_daily_goal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_small"
+                                android:textColor="@color/text_primary"
+                                android:textSize="@dimen/text_size_display_small"
+                                android:textStyle="bold"
+                                tools:text="2000 ml" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Water Droplet Visualization -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_medium"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/text_size_body_medium"
+                            tools:text="60% of daily goal" />
+
+                        <com.example.wellnesmate.views.WaterBottleView
+                            android:id="@+id/waterBottleView"
+                            android:layout_width="150dp"
+                            android:layout_height="300dp"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:layout_marginBottom="@dimen/spacing_medium" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/keep_going"
+                            android:textColor="@color/accent_blue"
+                            android:textStyle="italic"
+                            android:visibility="invisible"
+                            android:id="@+id/tv_encouragement"
+                            tools:visibility="visible"
+                            tools:text="Keep going! 💧" />
+
+                    </LinearLayout>
+
+                    <!-- Action Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_add_water"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/button_height_medium"
+                            android:layout_marginEnd="@dimen/spacing_small"
+                            android:layout_weight="1"
+                            android:text="@string/add_water"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/text_size_body_small"
+                            app:backgroundTint="@color/accent_blue"
+                            app:cornerRadius="@dimen/button_corner_radius"
+                            app:icon="@drawable/ic_add"
+                            app:iconGravity="textStart" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_set_reminder"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/button_height_medium"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:layout_weight="1"
+                            android:text="@string/set_reminder"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/text_size_body_small"
+                            app:cornerRadius="@dimen/button_corner_radius"
+                            app:icon="@drawable/ic_alarm"
+                            app:iconGravity="textStart"
+                            app:strokeColor="@color/accent_blue" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Today's History Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/card_corner_radius_large"
+                app:cardElevation="@dimen/card_elevation_medium"
+                app:cardBackgroundColor="@color/card_hydration"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_large">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recent Intake"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_size_headline_small"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_hydration_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:nestedScrollingEnabled="false"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_hydration_history" />
+
+                    <!-- Empty State -->
+                    <LinearLayout
+                        android:id="@+id/layout_empty_hydration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_large"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="24dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@color/surface_variant">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:padding="@dimen/spacing_medium"
+                                android:src="@drawable/ic_hydration"
+                                app:tint="@color/text_hint" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:text="No water intake recorded today"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/text_size_body_medium" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_extra_small"
+                            android:gravity="center"
+                            android:text="Tap 'Add Water' to start tracking"
+                            android:textColor="@color/text_tertiary"
+                            android:textSize="@dimen/text_size_body_small" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

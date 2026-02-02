@@ -1,0 +1,148 @@
+<resources>
+    <string name="app_name">DailyWell</string>
+
+    <!-- Navigation -->
+    <string name="nav_habits">Habits</string>
+    <string name="nav_mood">Mood</string>
+    <string name="nav_hydration">Hydration</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Habits -->
+    <string name="habits_title">Daily Habits</string>
+    <string name="add_habit">Add Habit</string>
+    <string name="edit_habit">Edit Habit</string>
+    <string name="delete_habit">Delete Habit</string>
+    <string name="habit_name">Habit Name</string>
+    <string name="habit_description">Description</string>
+    <string name="habit_target">Daily Target</string>
+    <string name="habit_unit">Unit</string>
+    <string name="habit_completed">Completed</string>
+    <string name="habit_progress">Progress</string>
+    <string name="mark_complete">Mark Complete</string>
+    <string name="mark_incomplete">Mark Incomplete</string>
+    <string name="today_progress">Today\'s Progress</string>
+    <string name="habit_streak">Streak: %d days</string>
+
+    <!-- Mood Journal -->
+    <string name="mood_title">Mood Journal</string>
+    <string name="log_mood">Log Your Mood</string>
+    <string name="mood_entry">Mood Entry</string>
+    <string name="select_mood">Select your mood</string>
+    <string name="mood_notes">Add notes (optional)</string>
+    <string name="save_mood">Save Mood</string>
+    <string name="mood_history">Mood History</string>
+    <string name="mood_trend">Mood Trend</string>
+    <string name="share_mood">Share Mood Summary</string>
+
+    <!-- Mood Calendar -->
+    <string name="mood_calendar_title">Mood Calendar</string>
+    <string name="mood_calendar_explanation">Your mood entries organized by date</string>
+    <string name="no_mood_entries_calendar">No mood entries to display in calendar view</string>
+
+    <!-- Mood Emojis and Labels -->
+    <string name="mood_very_happy">😄</string>
+    <string name="mood_happy">😊</string>
+    <string name="mood_neutral">😐</string>
+    <string name="mood_sad">😢</string>
+    <string name="mood_very_sad">😭</string>
+    <string name="mood_angry">😠</string>
+    <string name="mood_excited">🤩</string>
+    <string name="mood_calm">😌</string>
+    <string name="mood_anxious">😰</string>
+    <string name="mood_tired">😴</string>
+
+    <string name="mood_label_very_happy">Very Happy</string>
+    <string name="mood_label_happy">Happy</string>
+    <string name="mood_label_neutral">Neutral</string>
+    <string name="mood_label_sad">Sad</string>
+    <string name="mood_label_very_sad">Very Sad</string>
+    <string name="mood_label_angry">Angry</string>
+    <string name="mood_label_excited">Excited</string>
+    <string name="mood_label_calm">Calm</string>
+    <string name="mood_label_anxious">Anxious</string>
+    <string name="mood_label_tired">Tired</string>
+
+    <!-- Hydration -->
+    <string name="hydration_title">Hydration Tracker</string>
+    <string name="daily_goal">Daily Goal</string>
+    <string name="current_intake">Current Intake</string>
+    <string name="add_water">Add Water</string>
+    <string name="water_amount">Amount (ml)</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="reminder_interval">Reminder Interval</string>
+    <string name="hydration_reminder">Hydration Reminder</string>
+    <string name="time_to_drink_water">Time to drink water! 💧</string>
+    <string name="stay_hydrated">Stay hydrated for better health</string>
+    <string name="ml_unit">ml</string>
+    <string name="goal_reached">Great! You\'ve reached your daily goal!</string>
+    <string name="keep_going">Keep going! 💧</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="hydration_reminders">Hydration Reminders</string>
+    <string name="reminder_frequency">Reminder Frequency</string>
+    <string name="daily_goals">Daily Goals</string>
+    <string name="water_goal">Water Goal (ml)</string>
+    <string name="app_info">App Information</string>
+    <string name="version">Version</string>
+    <string name="about">About DailyWell</string>
+    <string name="reset_data">Reset All Data</string>
+    <string name="export_data">Export Data</string>
+
+    <!-- General -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="add">Add</string>
+    <string name="done">Done</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirm">Confirm</string>
+    <string name="loading">Loading...</string>
+    <string name="no_data">No data available</string>
+    <string name="error_occurred">An error occurred</string>
+
+    <!-- Time and Date -->
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="this_week">This Week</string>
+    <string name="date_format">MMM dd, yyyy</string>
+    <string name="time_format">HH:mm</string>
+    
+    <!-- Achievements -->
+    <string name="achievement_icon">Achievement Icon</string>
+    <string name="weekly_summary">Weekly Summary</string>
+    <string name="view_all">View All</string>
+    <string name="achievement_badges">Achievement Badges</string>
+    <string name="achievement_unlocked">Unlocked</string>
+    <string name="achievement_locked">Locked</string>
+    <string name="achievement_progress">%d%%</string>
+    <string name="achievement_view_all">View All Achievements</string>
+
+    <!-- Sharing -->
+    <string name="share_via">Share via</string>
+    <string name="share_habit_progress">My habit progress for today: %s</string>
+    <string name="share_mood_summary">My mood today: %s</string>
+
+    <!-- Notifications -->
+    <string name="channel_hydration_name">Hydration Reminders</string>
+    <string name="channel_hydration_description">Reminders to drink water throughout the day</string>
+
+    <!-- Intervals -->
+    <string name="interval_30_min">Every 30 minutes</string>
+    <string name="interval_1_hour">Every hour</string>
+    <string name="interval_2_hours">Every 2 hours</string>
+    <string name="interval_3_hours">Every 3 hours</string>
+    <string name="interval_4_hours">Every 4 hours</string>
+
+    <!-- Widget -->
+    <string name="widget_title">Today\'s Progress</string>
+    <string name="widget_habits_completed" formatted="false">Habits completed: %d/%d</string>
+
+    <!-- About -->
+    <string name="about_description">DailyWell helps you track daily habits, monitor your mood, and stay hydrated for a healthier lifestyle.</string>
+    <string name="version_info">Version 1.0</string>
+</resources>

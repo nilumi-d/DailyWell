@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WellnesMate" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_variant</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary</item>
+        
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_variant</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary</item>
+        
+        <!-- Status colors -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        
+        <!-- Surface and background colors -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        
+        <!-- Typography -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Material3.HeadlineLarge</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Material3.HeadlineMedium</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Material3.HeadlineSmall</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Material3.TitleMedium</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Material3.TitleSmall</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Material3.BodyLarge</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Material3.BodyMedium</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Material3.LabelLarge</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Material3.LabelMedium</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Material3.LabelSmall</item>
+        
+        <!-- Shape -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.WellnesMate.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.WellnesMate.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.WellnesMate.Large</item>
+    </style>
+
+    <style name="Theme.WellnesMate" parent="Base.Theme.WellnesMate" />
+    
+    <!-- Shape Appearances -->
+    <style name="ShapeAppearance.WellnesMate.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    
+    <style name="ShapeAppearance.WellnesMate.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    
+    <style name="ShapeAppearance.WellnesMate.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+</resources>
