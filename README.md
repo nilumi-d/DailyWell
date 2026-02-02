@@ -50,31 +50,9 @@ To run unit tests and instrumentation tests:
 ./gradlew connectedAndroidTest
 ```
 
-## Contributing
-
-If you'd like to contribute:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make changes and run tests
-4. Open a pull request with a clear description
-
 ## Where to look in the code
 
 - UI layouts: `app/src/main/res/layout/`
 - Drawables and icons: `app/src/main/res/drawable/`
 - Main app module: `app/`
 
-## License
-
-This repository does not include a license file. Add a `LICENSE` if you want to share the project publicly.
-
----
-
-If you want, I can also:
-
-- add screenshots or a demo GIF to this README
-- provide a CONTRIBUTING.md and CODE_OF_CONDUCT
-- create a minimal CHANGELOG.md
-
-Feel free to tell me which of these you'd like next.
